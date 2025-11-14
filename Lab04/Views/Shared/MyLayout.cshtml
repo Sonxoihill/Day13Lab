@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+@Html.Partial("_HeadPartial")
+
+<body class="sb-nav-fixed">
+    @Html.Partial("_TopNavPartial")
+
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+			@Html.Partial("_SideNavPartial")
+        </div>
+
+        <div id="layoutSidenav_content">
+            <main>
+                @RenderBody()
+            </main>
+
+            @Html.Partial("_FooterPartial")
+        </div>
+    </div>
+
+    @Html.Partial("_ScriptsPartial")
+
+    @RenderSection("Scripts", required:false);
+</body>
+</html>

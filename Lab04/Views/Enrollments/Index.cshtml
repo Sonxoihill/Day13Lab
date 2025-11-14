@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Lab04.Models.Enrollment>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a class = "btn btn-primary" asp-action="Create">Create New</a>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Learner)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.CourseId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Learner.LearnerId)
+            </td>
+            <td>
+                <a class = "btn btn-secondary" asp-action="Edit" asp-route-id="@item.EnrollmentId">Edit</a> |
+                <a class = "btn btn-success" asp-action="Details" asp-route-id="@item.EnrollmentId">Details</a> |
+                <a class = "btn btn-warning" asp-action="Delete" asp-route-id="@item.EnrollmentId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

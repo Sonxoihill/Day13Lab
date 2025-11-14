@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Lab04.Models.Major>
+
+@{
+    ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+
+<h1>Major List</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MajorName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MajorName)
+            </td>
+            <td>
+                <a class="btn btn-secondary" asp-action="Edit" asp-route-id="@item.MajorId"> <i class="bx bx-edit-alt"></i>Edit</a> |
+                <a class="btn btn-success" asp-action="Details" asp-route-id="@item.MajorId">Details</a> |
+                <a class="btn btn-warning" asp-action="Delete" asp-route-id="@item.MajorId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
