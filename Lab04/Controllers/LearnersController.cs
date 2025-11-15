@@ -20,10 +20,21 @@ namespace Lab04.Controllers
         }
 
         // GET: Learners
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? mid)
         {
-            var schoolDbContext = _context.Learner.Include(l => l.Major);
-            return View(await schoolDbContext.ToListAsync());
+            if (mid == null)
+            {
+                var learners = _context.Learner
+                    .Include(l => l.Major).ToList();
+                return View(learners);
+            }
+            else
+            {
+                var learners = _context.Learner
+                    .Where(l => l.MajorId == mid)
+                    .Include(l => l.Major).ToList();
+                return View(learners);
+            }
         }
 
         // GET: Learners/Details/5
@@ -159,6 +170,14 @@ namespace Lab04.Controllers
         private bool LearnerExists(int id)
         {
             return _context.Learner.Any(e => e.LearnerId == id);
+        }
+
+        public IActionResult LearnerByMajorID(int mid)
+        {
+            var learners = _context.Learner
+                .Where(l => l.MajorId == mid)
+                .Include(l => l.Major).ToList();
+            return PartialView("LearnerTable", learners);
         }
     }
 }

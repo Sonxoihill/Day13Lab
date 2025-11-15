@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Lab04.Models.Learner>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
+</p>
+@await Component.InvokeAsync("Major")
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstMidName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnrollmentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Major)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstMidName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EnrollmentDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Major.MajorId)
+                </td>
+                <td>
+                    <a class="btn btn-secondary" asp-action="Edit" asp-route-id="@item.LearnerId">Edit</a> |
+                    <a class="btn btn-success" asp-action="Details" asp-route-id="@item.LearnerId">Details</a> |
+                    <a class="btn btn-warning" asp-action="Delete" asp-route-id="@item.LearnerId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
