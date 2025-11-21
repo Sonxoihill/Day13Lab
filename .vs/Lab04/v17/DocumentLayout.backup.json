@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\VSCSharp\\Lab04\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{863FD093-ED30-42CB-A052-59FB7CE2C791}|Lab04\\Lab04.csproj|d:\\vscsharp\\lab04\\lab04\\views\\learners\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{863FD093-ED30-42CB-A052-59FB7CE2C791}|Lab04\\Lab04.csproj|solutionrelative:lab04\\views\\learners\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{863FD093-ED30-42CB-A052-59FB7CE2C791}|Lab04\\Lab04.csproj|d:\\vscsharp\\lab04\\lab04\\views\\shared\\mylayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{863FD093-ED30-42CB-A052-59FB7CE2C791}|Lab04\\Lab04.csproj|solutionrelative:lab04\\views\\shared\\mylayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{863FD093-ED30-42CB-A052-59FB7CE2C791}|Lab04\\Lab04.csproj|d:\\vscsharp\\lab04\\lab04\\views\\learners\\learnertable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{863FD093-ED30-42CB-A052-59FB7CE2C791}|Lab04\\Lab04.csproj|solutionrelative:lab04\\views\\learners\\learnertable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{863FD093-ED30-42CB-A052-59FB7CE2C791}|Lab04\\Lab04.csproj|d:\\vscsharp\\lab04\\lab04\\views\\learners\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{863FD093-ED30-42CB-A052-59FB7CE2C791}|Lab04\\Lab04.csproj|solutionrelative:lab04\\views\\learners\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{863FD093-ED30-42CB-A052-59FB7CE2C791}|Lab04\\Lab04.csproj|d:\\vscsharp\\lab04\\lab04\\controllers\\learnerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{863FD093-ED30-42CB-A052-59FB7CE2C791}|Lab04\\Lab04.csproj|solutionrelative:lab04\\controllers\\learnerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{863FD093-ED30-42CB-A052-59FB7CE2C791}|Lab04\\Lab04.csproj|d:\\vscsharp\\lab04\\lab04\\views\\shared\\mylayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{863FD093-ED30-42CB-A052-59FB7CE2C791}|Lab04\\Lab04.csproj|solutionrelative:lab04\\views\\shared\\mylayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{863FD093-ED30-42CB-A052-59FB7CE2C791}|Lab04\\Lab04.csproj|d:\\vscsharp\\lab04\\lab04\\views\\shared\\_scriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 400,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -82,12 +82,11 @@
               "RelativeToolTip": "Lab04\\Views\\Shared\\_ScriptsPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-15T03:58:50.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-15T03:58:50.37Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MyLayout.cshtml",
               "DocumentMoniker": "D:\\VSCSharp\\Lab04\\Lab04\\Views\\Shared\\MyLayout.cshtml",
               "RelativeDocumentMoniker": "Lab04\\Views\\Shared\\MyLayout.cshtml",
@@ -95,44 +94,43 @@
               "RelativeToolTip": "Lab04\\Views\\Shared\\MyLayout.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-15T03:58:39.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-15T03:58:39.702Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "LearnerTable.cshtml",
               "DocumentMoniker": "D:\\VSCSharp\\Lab04\\Lab04\\Views\\Learners\\LearnerTable.cshtml",
               "RelativeDocumentMoniker": "Lab04\\Views\\Learners\\LearnerTable.cshtml",
               "ToolTip": "D:\\VSCSharp\\Lab04\\Lab04\\Views\\Learners\\LearnerTable.cshtml*",
               "RelativeToolTip": "Lab04\\Views\\Learners\\LearnerTable.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAD4AAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-15T03:48:02.254Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\VSCSharp\\Lab04\\Lab04\\Views\\Learners\\Index.cshtml",
               "RelativeDocumentMoniker": "Lab04\\Views\\Learners\\Index.cshtml",
               "ToolTip": "D:\\VSCSharp\\Lab04\\Lab04\\Views\\Learners\\Index.cshtml",
               "RelativeToolTip": "Lab04\\Views\\Learners\\Index.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAUwDsAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAqwG0AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-15T03:42:51.189Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "LearnersController.cs",
               "DocumentMoniker": "D:\\VSCSharp\\Lab04\\Lab04\\Controllers\\LearnersController.cs",
               "RelativeDocumentMoniker": "Lab04\\Controllers\\LearnersController.cs",
               "ToolTip": "D:\\VSCSharp\\Lab04\\Lab04\\Controllers\\LearnersController.cs",
               "RelativeToolTip": "Lab04\\Controllers\\LearnersController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAuwLAAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAMcAAAAAAAAAAAAmwNkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-15T03:40:16.279Z",
               "EditorCaption": ""
@@ -147,8 +145,7 @@
               "RelativeToolTip": "Lab04\\Views\\Shared\\Components\\Major\\RenderMajor.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-15T03:30:38.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-15T03:30:38.663Z"
             },
             {
               "$type": "Document",
@@ -160,8 +157,7 @@
               "RelativeToolTip": "Lab04\\ViewComponents\\MajorViewComponent.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T03:24:11.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-15T03:24:11.473Z"
             },
             {
               "$type": "Document",

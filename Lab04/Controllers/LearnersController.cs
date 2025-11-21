@@ -13,28 +13,32 @@ namespace Lab04.Controllers
     public class LearnersController : Controller
     {
         private readonly SchoolDbContext _context;
-
+        private int pageSize = 3;
         public LearnersController(SchoolDbContext context)
         {
             _context = context;
         }
 
         // GET: Learners
-        public async Task<IActionResult> Index(int? mid)
+        public IActionResult Index(int? mid)
         {
-            if (mid == null)
+            var learners = (IQueryable<Learner>)_context.Learner.Include(l => l.Major);
+            if (mid != null)
             {
-                var learners = _context.Learner
-                    .Include(l => l.Major).ToList();
-                return View(learners);
-            }
-            else
-            {
-                var learners = _context.Learner
+                learners = (IQueryable<Learner>)_context.Learner
                     .Where(l => l.MajorId == mid)
-                    .Include(l => l.Major).ToList();
-                return View(learners);
+                    .Include(l => l.Major);
             }
+
+            int pageNum = (int)Math.Ceiling((double)learners.Count() / (float)pageSize);
+
+            ViewBag.PageNum = pageNum;
+
+            var result = learners.Take(pageSize)
+                .ToList();
+            return View(result);
+
+
         }
 
         // GET: Learners/Details/5
@@ -178,6 +182,37 @@ namespace Lab04.Controllers
                 .Where(l => l.MajorId == mid)
                 .Include(l => l.Major).ToList();
             return PartialView("LearnerTable", learners);
+        }
+
+        public IActionResult LearnFilter(int? mid, string? keyword, int? pageIndex)
+        {
+            var learners = (IQueryable<Learner>)_context.Learner;
+
+            int page = (int)(pageIndex == null || pageIndex <= 0 ? 1 : pageIndex);
+
+            if (mid != null)
+            {
+                learners = learners.Where(l => l.MajorId == mid);
+
+                ViewBag.mid = mid;
+            }
+
+            if (keyword != null)
+            {
+                learners = learners.Where(l => l.FirstMidName.ToLower().Contains(keyword.ToLower()));
+
+                ViewBag.keyword = keyword;
+            }
+
+            int pageNum = (int)Math.Ceiling((double)learners.Count() / (float)pageSize);
+
+            ViewBag.PageNum = pageNum;
+
+            var result = learners.Skip(pageSize * (page - 1))
+                .Take(pageSize)
+                .Include(l => l.Major);
+
+            return PartialView("LearnerTable", result);
         }
     }
 }
